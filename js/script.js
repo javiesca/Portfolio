@@ -16,12 +16,12 @@ window.onload = function () {
             links.classList.add("abrir");
         }
 
-        if (menu.getAttribute("class") == "nav_menu abrir") {
-            menu.classList.remove("abrir");
-            menu.classList.add("cerrar");
-        }else{
+        if (menu.getAttribute("class") == "nav_menu cerrar") {
             menu.classList.remove("cerrar");
             menu.classList.add("abrir");
+        }else{
+            menu.classList.remove("abrir");
+            menu.classList.add("cerrar");
         }
         
 
