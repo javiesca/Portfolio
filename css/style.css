@@ -1,0 +1,103 @@
+@import url(reset.css);
+
+body{
+    font-family: 'Anton', sans-serif;
+}
+
+
+.nav_bar{
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:120px;
+    color: white;
+}
+
+.nav_menu{
+    display:none;
+}
+
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    margin-right:50px;
+}
+
+.nav_links a{
+    margin: 30px;
+    font-size: 40px;
+    position: relative;
+}
+
+.nav_links a::before{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height:5px;
+    background-color: white;
+    transition: all 0.5s;
+}
+
+.nav_links a:hover::before{
+    width: 100%;
+}
+
+
+
+@media(max-width:800px){
+
+    .nav_links{
+        position: absolute;
+        top: 120px;
+        left: 0;
+        background-color: black;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        width: 100%;
+        height:-webkit-fill-available;
+        transform: translateX(-100%);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav_menu{
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .nav_menu:hover{
+        cursor: pointer;
+    }
+   
+    .nav_menu span{
+        width: 35px;
+        height:5px;
+        background-color: white;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        transform-origin: 5px 0px;
+        transition: all 0.5s;
+    }
+
+    .cerrar span{
+        transform: rotate(45deg) translate(0px, 0px)
+    }
+
+    .cerrar span:nth-child(2){
+        display:none;
+    }
+
+    .cerrar span:nth-child(3){
+        transform: rotate(-45deg) translate(-9px, 2px)
+    }
+
+    .abrir{
+        transform: translateX(0);
+    }
+}
+
+
