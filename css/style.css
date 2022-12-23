@@ -63,6 +63,7 @@ main{
 
 
 
+
 main img{
     filter: sepia();
     z-index: -1;
@@ -103,6 +104,10 @@ footer{
     margin-top: 20px;
     padding: 15px;
     flex-shrink: 0;
+}
+
+footer span{
+    font-size: 30px;
 }
 
 .footer_social{
