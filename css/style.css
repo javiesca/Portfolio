@@ -25,15 +25,22 @@ body{
 .nav_links{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-right:50px;
+    height: 90%;
+    
 }
 
 .nav_links a{
+    display: flex;
+    align-items: center;
     margin: 30px;
     font-size: 40px;
+    padding: 5px;
     position: relative;
+    cursor: pointer;
+  
 }
-
 .nav_links a::before{
     content: " ";
     position: absolute;
@@ -87,9 +94,9 @@ main img{
 
 .main_texto_titulo{
     font-size: 120px;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(53,47,37,1) 35%, rgba(255,242,189,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(53,47,37,1) 17%, rgba(255,242,189,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .main_texto p{
@@ -195,20 +202,12 @@ footer span{
     }
 
     .main_texto_titulo{
-        font-size: 50px;
+        font-size: 70px;
     }
 
     .main_texto p{
         font-size: 16px;
     }
-
-
-
-
- 
-
-
-
 }
 
 
