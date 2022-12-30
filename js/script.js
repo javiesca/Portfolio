@@ -43,7 +43,6 @@ window.onload = function () {
         links.classList.add("cerrar");
         menu.classList.remove("cerrar");
         menu.classList.add("abrir");
-       
     }
 
    
