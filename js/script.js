@@ -9,9 +9,12 @@ window.onload = function () {
         if (links.getAttribute("class") == "nav_links abrir") {
             links.classList.remove("abrir");
             links.classList.add("cerrar");
+            document.querySelector("main").style.display="flex";
+
         }else{
             links.classList.remove("cerrar");
             links.classList.add("abrir");
+            document.querySelector("main").style.display="none";
         }
 
         if (menu.getAttribute("class") == "nav_menu cerrar") {
