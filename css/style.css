@@ -1,9 +1,12 @@
 @import url("./reset.css");
+@import url("./imports.css");
 
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url(../img/grey-2661270.webp);
+    background-size: cover;
 }
 
 /* ESTILOS NAV */
@@ -49,7 +52,7 @@ body{
     bottom: -7px;
     width: 0;
     height: 5px;
-    background-color: white;
+    background-color: #9C9272;
     transition: all 0.5s;
 }
 
@@ -67,14 +70,19 @@ body{
     justify-content: space-around;
     gap: 30px;
     margin: 0 30px;
+    margin-top: 80px;
+    animation: animacion 0.3s ease 0s 1 normal forwards;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .inicio img{
     filter: sepia();
     z-index: -1;
     border-radius: 50%;
-    width: 100%;
+    width: 100%; 
 }
+
 
 .inicio_imagen{
     width: 60%;
@@ -84,12 +92,24 @@ body{
 .inicio_texto{
     display: flex;
     flex-direction: column;
-    text-align: center;
     margin-top: 40px;
     gap: 40px;
     width: 50%;
-    font-family: 'Roboto', sans-serif;
 }
+
+.inicio_texto h1 {
+    text-align: center;
+}
+
+.inicio_texto p{
+    line-height: 30px;
+    text-align: justify;
+}
+
+.inicio_texto span{
+    color: #C4AF88;
+}
+
 
 .inicio_texto_titulo{
     font-size: 120px;
@@ -108,25 +128,43 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+
 }
 
-h2{
+.formacion_container h2{
     font-size: 30px;
     text-align: center;
-    border-bottom: 2px solid #9C9272;
+    font-family: 'Anton', sans-serif;
+    line-height: 50px;
+    width: 30%;
+    
 }
 
 .formacion_container{
-    background-color:#EDEDED;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    padding: 20px;
+    width: 90%;
+    padding: 30px 0;
+    animation: animacion 0.3s ease 0s 1 normal forwards;
+    z-index: -1;
+}
+
+@keyframes animacion {
+	0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
 }
 
 .formacion_container_content{
     display: flex;
+    align-items: center;
     width: 100%;
     padding: 20px 0;
 }
@@ -142,23 +180,24 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     align-items: flex-start;
     width: 50%;
     line-height: 25px;
 }
 
 .formacion_container_content_texto span{
-    border-bottom: 2px solid #9C9272;
+    border-bottom: 2px solid rgb(156, 146, 114);
     font-weight: bolder;
+    font-size: 20px;
 }
 
 .formacion_container_content_img img{
     width: 70%;
     min-width:300px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
 }
+
 
 ul{
     list-style-type: disc;
@@ -167,13 +206,15 @@ ul{
 }
 
 
+                /*EXPERIENCIA*/
 
 
+                /*TRABAJOS*/
 
-
-
-
-
+.trabajos{
+    display: flex;
+    flex-grow: 1;
+}
 
 
 /* FOOTER */
@@ -183,11 +224,10 @@ footer{
     align-items: center;
     width: 100%;
     height: 80px;
-    color: white;
-    background-color: black;
-    margin-top: 20px;
     padding: 15px;
-    flex-shrink: 0;
+    border-top: 1px solid #9C9272;
+    background-color: black;
+    color: white;
 }
 
 footer span{
@@ -200,7 +240,22 @@ footer span{
     font-size: 30px;
 }
 
+.footer_social a:nth-child(1):hover{
+   color:#0e76a8;
+}
+
+.footer_social a:nth-child(2):hover{
+    color:#00acee;
+ }
+
+ .footer_social a:nth-child(3):hover{
+    color:#f26a6a;
+ }
+
+
+
 @media(max-width:1490px){
+
     .inicio_texto_titulo{
         font-size: 60px;
     }
@@ -278,10 +333,29 @@ footer span{
         font-size: 16px;
     }
 
-    @media(max-width:450px){
-        .inicio_texto_titulo{
-            font-size: 40px;
-        }
+    .formacion_container_content{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .formacion_container_content h2{
+       width: 80%;
+    }
+    
+    .formacion_container_content_img{
+        width: 80%;
+    }
+    
+    .formacion_container_content_texto{
+        width: 80%;
+    }
+}
+
+@media(max-width:450px){
+    .inicio_texto_titulo{
+        font-size: 40px;
     }
 }
 

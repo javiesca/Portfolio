@@ -6,6 +6,7 @@ window.onload = function () {
     let enlaces = document.querySelectorAll(".nav_links_links")
 
     function muestraNav() {
+        
         if (links.getAttribute("class") == "nav_links abrir") {
             links.classList.remove("abrir");
             links.classList.add("cerrar");
@@ -16,6 +17,7 @@ window.onload = function () {
             links.classList.add("abrir");
             document.querySelector("main").style.display="none";
         }
+
 
         if (menu.getAttribute("class") == "nav_menu cerrar") {
             menu.classList.remove("cerrar");
