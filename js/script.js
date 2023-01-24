@@ -50,8 +50,6 @@ window.onload = function () {
         menu.classList.add("abrir");
     }
 
-   
-
 
 }
 

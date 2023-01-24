@@ -1,5 +1,5 @@
 @import url("./reset.css");
-@import url("./imports.css");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&family=Roboto&display=swap');
 
 body{
     display: flex;
@@ -32,6 +32,7 @@ body{
     align-items: center;
     margin-right:50px;
     height: 90%;
+    
 }
 
 .nav_links a{
@@ -43,9 +44,9 @@ body{
     position: relative;
     cursor: pointer;
     transition: all 0.5s;
-  
 }
-.nav_links a::before{
+
+.nav_links a::before, .trabajos_container a::before{
     content: " ";
     position: absolute;
     left: 0;
@@ -56,7 +57,7 @@ body{
     transition: all 0.5s;
 }
 
-.nav_links a:hover::before{
+.nav_links a:hover::before, .trabajos_container a:hover::before{
     width: 100%;
 }
 
@@ -71,9 +72,10 @@ body{
     gap: 30px;
     margin: 0 30px;
     margin-top: 80px;
-    animation: animacion 0.3s ease 0s 1 normal forwards;
+    animation: animacion 1s ease 0s 1 normal forwards;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    z-index: -1;
 }
 
 .inicio img{
@@ -97,21 +99,8 @@ body{
     width: 50%;
 }
 
-.inicio_texto h1 {
-    text-align: center;
-}
-
-.inicio_texto p{
-    line-height: 30px;
-    text-align: justify;
-}
-
-.inicio_texto span{
-    color: #C4AF88;
-}
-
-
 .inicio_texto_titulo{
+    text-align: center;
     font-size: 120px;
     background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(53,47,37,1) 17%, rgba(255,242,189,1) 100%);
     -webkit-background-clip: text;
@@ -119,22 +108,32 @@ body{
 }
 
 .inicio_texto p{
+    line-height: 30px;
+    text-align: justify;
     font-size: 20px;
 }
 
+.inicio_texto span{
+    color: #C4AF88;
+}
+
+
+
+
+
+
                 /* FORMACIÓN */
-.formacion{
-    margin-top: 110px;
+.formexp{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content:space-around;
     font-family: 'Roboto', sans-serif;
     flex-grow: 1;
-
+    margin-top: 80px;
 }
 
-.formacion_container h2{
+.formexp_container h2{
     font-size: 30px;
     text-align: center;
     font-family: 'Anton', sans-serif;
@@ -143,40 +142,31 @@ body{
     
 }
 
-.formacion_container{
+.formexp_container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 90%;
     padding: 30px 0;
-    animation: animacion 0.3s ease 0s 1 normal forwards;
+    animation: animacion 1s ease 0s 1 normal forwards;
     z-index: -1;
 }
 
-@keyframes animacion {
-	0% {
-		transform: scale(0.5);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
-
-.formacion_container_content{
+.formexp_container_content{
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 20px 0;
+    width: 90%;
+    padding: 30px;  
 }
 
-.formacion_container_content_img{
+.formexp_container_content_img{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 80%;
 }
 
-.formacion_container_content_texto{
+.formexp_container_content_texto{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -186,34 +176,95 @@ body{
     line-height: 25px;
 }
 
-.formacion_container_content_texto span{
+.formexp_container_content_texto span{
     border-bottom: 2px solid rgb(156, 146, 114);
     font-weight: bolder;
     font-size: 20px;
 }
 
-.formacion_container_content_img img{
-    width: 70%;
-    min-width:300px;
+.formexp_container_content_img img{
+    width: 60%;
+    min-width:250px;
     border-radius: 5px;
 }
-
 
 ul{
     list-style-type: disc;
     margin-left: 15px;
     line-height: 25px;
 }
-
-
-                /*EXPERIENCIA*/
-
-
                 /*TRABAJOS*/
 
 .trabajos{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     flex-grow: 1;
+    padding: 30px;
+    margin-top: 80px;
+    animation: animacion 1s ease 0s 1 normal forwards;
+    z-index: -1;
+}
+
+.trabajos_container{
+    display: flex;
+    flex-direction:column;
+    margin: 20px 0;
+    padding: 20px;
+    width: 70%;
+  
+}
+
+.trabajos_imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.trabajos_imgs_desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 50%;
+}
+
+.trabajos_imgs_movil{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.img_desktop_texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.trabajos_container a{
+    position: relative;
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+.img_movil{
+    max-height: 450px;
+}
+
+.img_desktop{
+    width: 400px;
+}
+
+@keyframes animacion {
+	0% {
+        opacity: 0;
+	}
+	100% {
+        opacity: 1;
+	}
 }
 
 
@@ -231,7 +282,7 @@ footer{
 }
 
 footer span{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .footer_social{
@@ -251,7 +302,6 @@ footer span{
  .footer_social a:nth-child(3):hover{
     color:#f26a6a;
  }
-
 
 
 @media(max-width:1490px){
@@ -316,9 +366,9 @@ footer span{
 
     .inicio{
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        gap: 120px;
+        margin-bottom: 20px;
     }
 
     .inicio_texto{
@@ -326,36 +376,67 @@ footer span{
     }
 
     .inicio_texto_titulo{
-        font-size: 70px;
+        font-size: 90px;
     }
 
     .inicio_texto p{
-        font-size: 16px;
+        font-size: 20px;
     }
 
-    .formacion_container_content{
+    .formexp_container_content{
         flex-direction: column;
         align-items: center;
         gap: 40px;
         padding: 0;
     }
 
-    .formacion_container_content h2{
+    .formexp_container_content h2{
        width: 80%;
     }
     
-    .formacion_container_content_img{
+    .formexp_container_content_texto{
         width: 80%;
     }
-    
-    .formacion_container_content_texto{
-        width: 80%;
+
+    .trabajos{
+        padding:10px;
+        margin-top: 100px;
     }
+
+
+    .trabajos_container{
+        width: 100%;
+        padding: 0;
+        margin:0;
+    }
+
+    .trabajos_imgs{
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+    }
+
+    .trabajos_imgs_desktop{
+        width: 100%;
+    }
+
+    .img_movil{
+        display: none;
+    }
+
+    .img_desktop{
+        width: 350px;
+    }
+
+
 }
 
 @media(max-width:450px){
+
     .inicio_texto_titulo{
-        font-size: 40px;
+        font-size: 50px;
+        width: 100%;
     }
 }
 
